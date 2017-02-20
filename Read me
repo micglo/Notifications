@@ -1,0 +1,3 @@
+Poglądowa aplikacja server + client SignalR, WPF. Serwis przyjmowania i rozsyłania wiadomości oparty na technologii Asp.Net SignalR. 
+Wykorzystano MongoDb jak warstwę bazy danych. AutoFac'a jako kontener IoC. Autentykacja poprzez Windows. Prosta aplikacja WPF z wyskakującymi powiadomieniami o wiadomości
+jako konsument serwera.
