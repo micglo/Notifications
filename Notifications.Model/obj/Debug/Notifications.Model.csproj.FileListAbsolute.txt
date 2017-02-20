@@ -1,0 +1,12 @@
+C:\Users\Michal\Documents\Projekty\notifications\Notifications.Model\bin\Debug\Notifications.Model.dll
+C:\Users\Michal\Documents\Projekty\notifications\Notifications.Model\bin\Debug\Notifications.Model.pdb
+C:\Users\Michal\Documents\Projekty\notifications\Notifications.Model\obj\Debug\Notifications.Model.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\Projekty\notifications\Notifications.Model\obj\Debug\Notifications.Model.dll
+C:\Users\Michal\Documents\Projekty\notifications\Notifications.Model\obj\Debug\Notifications.Model.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Model\bin\Debug\Notifications.Model.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Model\bin\Debug\Notifications.Model.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Model\obj\Debug\Notifications.Model.csprojResolveAssemblyReference.cache
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Model\obj\Debug\Notifications.Model.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Model\obj\Debug\Notifications.Model.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Model\bin\Debug\Notifications.Wpf.Utils.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Model\bin\Debug\Notifications.Wpf.Utils.pdb

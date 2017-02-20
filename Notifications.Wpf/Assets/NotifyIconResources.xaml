@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:tb="http://www.hardcodet.net/taskbar"
+                    xmlns:local="clr-namespace:Notifications.Wpf.ViewModel"
+                    xmlns:controls="clr-namespace:Notifications.Wpf.Controls">
+
+    <ContextMenu x:Shared="false" x:Key="SysTrayMenu">
+        <MenuItem Header="Wyłącz powiadomienia" Command="{Binding Disconnect}" />
+        <MenuItem Header="Włącz powiadomienia" Command="{Binding Connect}" />
+        <Separator />
+        <MenuItem Header="Exit" Command="{Binding ExitApplication}" />
+    </ContextMenu>
+
+
+    <tb:TaskbarIcon x:Key="NotifyIcon"
+                    IconSource="../Icons/Bell.ico"
+                    DoubleClickCommand="{Binding ShowNotifications}"
+                    ContextMenu="{StaticResource SysTrayMenu}">
+
+        <tb:TaskbarIcon.TrayToolTip>
+            <controls:ToolTipControl />
+        </tb:TaskbarIcon.TrayToolTip>
+
+        <tb:TaskbarIcon.DataContext>
+            <local:NotifyIconViewModel />
+        </tb:TaskbarIcon.DataContext>
+    </tb:TaskbarIcon>
+
+</ResourceDictionary>

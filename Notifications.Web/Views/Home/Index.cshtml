@@ -1,0 +1,100 @@
+﻿@using System.Web.Configuration
+@model Notifications.Model.Message
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Wyślij wiadomość</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Subject)
+            @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", id = "subject", placeholder = "Temat", title = "Temat" })
+            @Html.ValidationMessageFor(m => m.Subject, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Recipients)
+            @Html.TextBoxFor(m => m.Recipients, new { @class = "form-control", id = "recipients", placeholder = "Odbiorcy", title = "Odbiorcy" })
+            @Html.ValidationMessageFor(m => m.Recipients, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Text)
+            @Html.TextAreaFor(m => m.Text, new { @class = "form-control", id = "text", placeholder = "Wiadomość", title = "Wiadomość", rows = 6 })
+            @Html.ValidationMessageFor(m => m.Text, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group text-center">
+            <button class="btn btn-success" id="sendMessage">Wyślij</button>
+        </div>
+        
+        <div class="form-group text-center">
+            <button class="btn btn-danger" id="stopConnection">Zatrzymaj</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="discussion"></div>
+    </div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script>
+        $(function () {
+            var connection = $.hubConnection('@(WebConfigurationManager.AppSettings["SignalRServerUrl"])');
+            var messageHubProxy = connection.createHubProxy('messageHub');
+            var notificationHubProxy = connection.createHubProxy('notificationHub');
+
+            notificationHubProxy.on('notify', onNotify);
+
+            $('#subject').focus();
+
+            connection.start({ jsonp: true }).done(startConnection).fail(function () { console.log('Could not Connect!'); });
+
+            $('#stopConnection').click(function() {
+                connection.stop();
+            });
+
+            connection.disconnected(function() {
+                console.log('Połączenie zakończone');
+            });
+
+            connection.error(function (error) {
+                console.log('SignalR error: ' + error);
+            });
+
+            function startConnection() {
+                $('#sendMessage').click(function () {
+
+                    var message = {
+                        Recipients: $('#recipients').val(),
+                        Subject: $('#subject').val(),
+                        Text: $('#text').val()
+                    };
+
+                    messageHubProxy.invoke('send', message);
+
+                    $('#subject').val('').focus();
+                    $('#recipients').val('');
+                    $('#text').val('');
+                });
+            }
+        });
+
+        function onNotify(notification) {
+            var encodedName = $('<div />').text(notification.Sender).html();
+            var encodedRecipients = $('<div />').text(notification.Recipient).html();
+            var encodedSubject = $('<div />').text(notification.Subject).html();
+            var encodedText = $('<div />').text(notification.Text).html();
+            $('#discussion').append('<li><strong>' + encodedName
+                + '</strong>:&nbsp;&nbsp;' + encodedRecipients + '&nbsp;&nbsp;' + encodedSubject + '&nbsp;&nbsp;' + encodedText + '</li>');
+        };
+    </script>
+}

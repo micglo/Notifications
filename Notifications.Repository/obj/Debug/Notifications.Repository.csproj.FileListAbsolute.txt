@@ -1,0 +1,17 @@
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\Notifications.Repository.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\Notifications.Repository.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\Notifications.Domain.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\MongoDB.Bson.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\Notifications.Domain.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\MongoDB.Bson.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\obj\Debug\Notifications.Repository.csprojResolveAssemblyReference.cache
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\obj\Debug\Notifications.Repository.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\obj\Debug\Notifications.Repository.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\Notifications.Repository.dll.config
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\MongoDB.Driver.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\Notifications.Dal.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\Notifications.Dal.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\MongoDB.Driver.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\notifications\Notifications.Repository\bin\Debug\MongoDB.Driver.Core.xml
